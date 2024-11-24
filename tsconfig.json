@@ -1,22 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ESNext",                          // Cible moderne, souvent adaptée pour les projets React récents
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],     // Bibliothèques modernes pour DOM et ESNext
     "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
+    "skipLibCheck": true,                         // Ignorer la vérification des types dans les fichiers de bibliothèque
+    "esModuleInterop": true,                      // Faciliter l'import des modules CommonJS (comme `require`)
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": true,                               // Mode strict pour améliorer la qualité du code TypeScript
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": "ESNext",                           // Utiliser les modules ESNext pour la compatibilité moderne
     "moduleResolution": "Node",
-    "resolveJsonModule": true,
+    "resolveJsonModule": true,                    // Pour permettre l'import des fichiers JSON
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noEmit": true,                               // Ne pas émettre de fichiers JavaScript après compilation
+    "jsx": "react-jsx",                           // Pour utiliser le JSX moderne
+    "baseUrl": ".",                               // Définir la racine pour les chemins relatifs
+    "paths": {                                    // Alias de chemin pour simplifier les imports
+      "@/*": ["src/*"]
+    },
+    "typeRoots": ["./node_modules/@types"]        // Assurez-vous que les types sont trouvés
   },
-  "include": ["src"],
+  "include": ["src"],                             // Inclure le dossier `src` dans la compilation
+  "exclude": ["node_modules", "dist"],            // Exclure les dossiers `node_modules` et `dist` 
   "references": [
     {
       "path": "./tsconfig.node.json"

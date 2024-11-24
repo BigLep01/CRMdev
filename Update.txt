@@ -1,0 +1,5 @@
+2024-11-14 Le create companies est finit. Passer au next
+
+2024-11-15 Les entreprises sont visible. Je suis entrain de modifier edit.tsx pour pouovoir modifier les entreprise en cliquant sur l'oeil.
+
+2024-11-19 Il est possible d'ajouter des notes mais il sont liée avec personne car le lien avec la table user bug
